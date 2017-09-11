@@ -6,8 +6,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class CourseService {
 
-    @Autowired
     private CourseDAO courseDAO;
+
+    @Autowired
+    public CourseService (CourseDAO courseDAO) {
+        this.courseDAO = courseDAO;
+    }
 
     public CourseDAO getCourseDAO() {
         return courseDAO;
