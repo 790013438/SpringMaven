@@ -1,8 +1,10 @@
 package snippets.spring;
 
 import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 @Component
-public class CourseDAO {
+@Qualifier("coursseDAO")
+public class CourseDAO implements ICourseDAO {
 
 }
