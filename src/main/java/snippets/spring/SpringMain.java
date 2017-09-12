@@ -9,10 +9,9 @@ public class SpringMain {
         //create ApplicationContext
         @SuppressWarnings("resource")
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("context.xml");
-        //Get bean
-        CourseService courseService = (CourseService)applicationContext.getBean("courseService");
-        //Get and print CourseDAO. It should not be null
-        System.out.println("CourseDAO = " + courseService.getCourseDAO());
+        //call and print applicationContext.getBean first time
+        System.out.println("Course Service 1 - " + applicationContext.getBean("courseService"));
+        System.out.println("Course Service 2 - " + applicationContext.getBean("courseService"));
     }
 
 }
