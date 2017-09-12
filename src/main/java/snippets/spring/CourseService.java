@@ -13,4 +13,9 @@ public class CourseService {
     public ICourseDAO getCourseDAO() {
         return courseDAO;
     }
+
+    @Autowired
+    public void setCourseDAO (@Qualifier("courseDAO1") ICourseDAO courseDAO) {
+        this.courseDAO = courseDAO;
+    }
 }
